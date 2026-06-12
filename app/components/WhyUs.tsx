@@ -6,27 +6,24 @@ const features = [
   { icon:"🔧", title:"Installation Support", desc:"Professional installation included with every appliance purchase." },
   { icon:"💍", title:"Seervarisai Specialists", desc:"Complete curated wedding packages so your family shops stress-free." },
 ];
-
 export default function WhyUs() {
   return (
-    <section id="why" style={{ background:"white", padding:"5rem 1.5rem", borderTop:"1px solid #FAECC4", borderBottom:"1px solid #FAECC4" }}>
-      <style>{`.why-card{border:1px solid #FAECC4;border-radius:8px;padding:1.5rem;background:#FFFDF8;transition:border-color 0.2s}.why-card:hover{border-color:#D4A017}`}</style>
+    <section id="why" style={{ background:"white", padding:"4rem 1.25rem", borderTop:"1px solid #FAECC4", borderBottom:"1px solid #FAECC4" }}>
+      <style>{`.why-card{border:1px solid #FAECC4;border-radius:8px;padding:1.25rem;background:#FFFDF8;transition:border-color 0.2s}.why-card:hover{border-color:#D4A017}.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}@media(max-width:480px){.why-grid{grid-template-columns:1fr}}`}</style>
       <div style={{ maxWidth:1100, margin:"0 auto" }}>
         <p style={{ color:"#A07510", fontSize:"0.72rem", letterSpacing:"0.14em", textTransform:"uppercase", fontWeight:600 }}>Why Choose Us</p>
         <div className="gold-line" />
-        <h2 style={{ fontFamily:"var(--font-serif)", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", fontWeight:700, color:"#3D0C11", lineHeight:1.2, marginBottom:"0.75rem" }}>
+        <h2 style={{ fontFamily:"var(--font-serif)", fontSize:"clamp(1.7rem,5vw,2.8rem)", fontWeight:700, color:"#3D0C11", lineHeight:1.2, marginBottom:"0.75rem" }}>
           Trusted by Hundreds<br/>of Families
         </h2>
-        <p style={{ color:"#9B1D28", fontSize:"0.97rem", maxWidth:520, marginBottom:"3rem", lineHeight:1.7 }}>
+        <p style={{ color:"#9B1D28", fontSize:"0.97rem", maxWidth:520, marginBottom:"2.5rem", lineHeight:1.7 }}>
           Quality products, honest pricing, and service that families across Dharmapuri have relied on for years.
         </p>
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:"1.25rem" }}>
+        <div className="why-grid">
           {features.map(f => (
             <div key={f.title} className="why-card">
-              <div style={{ width:40, height:40, background:"#FEF9EC", borderRadius:6, display:"flex", alignItems:"center", justifyContent:"center", fontSize:"1.3rem", marginBottom:"0.9rem" }}>
-                {f.icon}
-              </div>
-              <h3 style={{ fontWeight:600, color:"#3D0C11", fontSize:"0.93rem", marginBottom:"0.35rem" }}>{f.title}</h3>
+              <div style={{ width:40, height:40, background:"#FEF9EC", borderRadius:6, display:"flex", alignItems:"center", justifyContent:"center", fontSize:"1.3rem", marginBottom:"0.85rem" }}>{f.icon}</div>
+              <h3 style={{ fontWeight:600, color:"#3D0C11", fontSize:"0.93rem", marginBottom:"0.3rem" }}>{f.title}</h3>
               <p style={{ color:"#9B1D28", fontSize:"0.84rem", lineHeight:1.6 }}>{f.desc}</p>
             </div>
           ))}
